@@ -32,6 +32,7 @@ module.exports = {
     'no-console': 1,
     'keyword-spacing': [2, { 'after': true }],
     'key-spacing': [2, { 'beforeColon': false }],
-    'no-multiple-empty-lines': [2, {'max': 2}]
+    'no-multiple-empty-lines': [2, {'max': 2}],
+    'vue/multi-word-component-names': 0,
   }
 }

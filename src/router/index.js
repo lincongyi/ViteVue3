@@ -10,9 +10,14 @@ const routes = [
     component: () => import('@/pages/home/index.vue')
   },
   {
-    path: '/about',
-    name: 'ABOUT',
-    component: () => import('@/pages/about/index.vue')
+    path: '/GetImageUrl',
+    name: 'GetImageUrl',
+    component: () => import('@/pages/GetImageUrl/index.vue') // 获取静态图片地址
+  },
+  {
+    path: '/UnpluginAutoImport',
+    name: 'UnpluginAutoImport',
+    component: () => import('@/pages/UnpluginAutoImport/index.vue') // 自动导入vue api
   },
 ]
 
