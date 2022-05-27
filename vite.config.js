@@ -10,6 +10,12 @@ export default defineConfig({
       '@': resolve(__dirname, './src') // 设置 `@` 指向 `src` 目录
     }
   },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: []
+    }
+  },
   server: {
     port: 4000,
     open: true

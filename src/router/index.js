@@ -7,7 +7,12 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/pages/home/index.vue')
+    component: () => import('@/pages/Home/index.vue')
+  },
+  {
+    path: '/Scss',
+    name: 'Scss',
+    component: () => import('@/pages/Scss/index.vue') // 引入scss
   },
   {
     path: '/GetImageUrl',
