@@ -4,12 +4,14 @@
 <p>npm i node-sass sass sass-loader style-loader -D</p>
 <h3>2.在vue.config.js中添加配置</h3>
 <pre>
-  pluginOptions: {
-    'style-resources-loader': {
-      preProcessor: 'scss',
-      patterns: []
+  <code>
+    pluginOptions: {
+      'style-resources-loader': {
+        preProcessor: 'scss',
+        patterns: []
+      }
     }
-  }
+  </code>
 </pre>
 <div class="image-wrap">
   <img :src="getImageUrl('scss-01')" />

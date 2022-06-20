@@ -1,2 +1,0 @@
-Auto import APIs on-demand for Vite, Webpack, Rollup and esbuild. With TypeScript support. Powered by unplugin.
-npm i unplugin-auto-import -D
