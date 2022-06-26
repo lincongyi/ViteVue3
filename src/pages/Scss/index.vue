@@ -19,13 +19,5 @@
 </template>
 <script setup>
 import { getImageUrl } from '@/utils'
+import './index.scss'
 </script>
-<style lang="scss" scoped>
-.image-wrap{
-  height: 400px;
-  img{
-    object-fit: contain;
-    height: 100%;
-  }
-}
-</style>

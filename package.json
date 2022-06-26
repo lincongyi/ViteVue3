@@ -19,6 +19,10 @@
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^26.0.0",
+    "stylelint-order": "^5.0.0",
     "unplugin-auto-import": "^0.8.5",
     "vite": "^2.9.7"
   }

@@ -15,6 +15,11 @@ const routes = [
     component: () => import('@/pages/Scss/index.vue') // 引入scss
   },
   {
+    path: '/Stylelint',
+    name: 'Stylelint',
+    component: () => import('@/pages/Stylelint/index.vue') // 配置stylelint
+  },
+  {
     path: '/GetImageUrl',
     name: 'GetImageUrl',
     component: () => import('@/pages/GetImageUrl/index.vue') // 获取静态图片地址
