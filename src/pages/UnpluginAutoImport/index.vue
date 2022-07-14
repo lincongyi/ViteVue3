@@ -22,10 +22,11 @@
   <div class="image-wrap">
     <img :src="getImageUrl('unpluginAutoImport-01')" />
   </div>
-  <h3>3..eslintrc.js文件extends属性加入./.eslintrc-auto-import.json文件的引用</h3>
+  <h3>3. .eslintrc.js文件extends属性加入./.eslintrc-auto-import.json文件的引用</h3>
   <div class="image-wrap">
     <img :src="getImageUrl('unpluginAutoImport-02')" />
   </div>
+  <h3>4. .gitignore文件忽略auto-import.d.ts文件，不然每次都会生成配置文件</h3>
   <div>{{name}} {{phoneNumber}}</div>
 </template>
 <script setup>

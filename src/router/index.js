@@ -29,6 +29,11 @@ const routes = [
     name: 'UnpluginAutoImport',
     component: () => import('@/pages/UnpluginAutoImport/index.vue') // 自动导入vue api
   },
+  {
+    path: '/ElementPlusUI',
+    name: 'ElementPlusUI',
+    component: () => import('@/pages/ElementPlusUI/index.vue') // 引入ElementPlusUI
+  },
 ]
 
 const router = createRouter({
