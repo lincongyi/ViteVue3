@@ -2,6 +2,7 @@
 <h1>HOME PAGE</h1>
 <p>shallow:{{shallow}}</p>
 <p>val:{{val}}</p>
+<p class="test">aaaaaaa</p>
 </template>
 <script setup>
 const shallow = shallowRef(0)
@@ -10,7 +11,10 @@ console.log(shallow)
 console.log(val)
 shallow.value = 100
 val.value = 200
+const pcolor = ref('#ff0')
 </script>
 <style lang="scss" scoped>
-
+.test{
+  color: v-bind('pcolor')
+}
 </style>

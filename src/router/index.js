@@ -34,6 +34,11 @@ const routes = [
     name: 'ElementPlusUI',
     component: () => import('@/pages/ElementPlusUI/index.vue') // 引入ElementPlusUI
   },
+  {
+    path: '/Pinia',
+    name: 'Pinia',
+    component: () => import('@/pages/Pinia/index.vue') // Pinia
+  },
 ]
 
 const router = createRouter({
