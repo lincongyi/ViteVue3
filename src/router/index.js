@@ -32,6 +32,7 @@ const routes = [
   {
     path: '/ElementPlusUI',
     name: 'ElementPlusUI',
+    alias: ['/elementUI', '/element'], // 设置别名
     component: () => import('@/pages/ElementPlusUI/index.vue') // 引入ElementPlusUI
   },
   {

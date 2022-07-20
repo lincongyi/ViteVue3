@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue'],
+      imports: ['vue', 'vue-router'],
       // Generate corresponding .eslintrc-auto-import.json file.
       eslintrc: {
         enabled: false, // Default `false`
@@ -37,6 +37,6 @@ export default defineConfig({
   },
   server: {
     port: 4000,
-    open: true
+    open: false
   },
 })
