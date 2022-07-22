@@ -1,6 +1,7 @@
 import {
   createRouter,
-  createWebHashHistory,
+  createWebHistory,
+  // createWebHashHistory,
 } from 'vue-router'
 
 const routes = [
@@ -40,10 +41,30 @@ const routes = [
     name: 'Pinia',
     component: () => import('@/pages/Pinia/index.vue') // Pinia
   },
+  {
+    path: '/VueRouter',
+    name: 'VueRouter',
+    component: () => import('@/pages/VueRouter/index.vue'), // VueRouter
+    children: [
+      // { path: '', redirect: 'GetImageUrl' }, // path值为空，会重定向到指定的页面地址，并忽略component的内容
+      { path: 'childPage', name: 'childPage', component: () => import('@/pages/Pinia/index.vue') },
+    ]
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: () => import('@/pages/404/index.vue') // 404
+  },
+  {
+    path: '/:pathMatch(.*)',
+    name: '404',
+    component: () => import('@/pages/404/index.vue'), // 404
+  },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  // history: createWebHashHistory(),
+  history: createWebHistory(),
   routes
 })
 
