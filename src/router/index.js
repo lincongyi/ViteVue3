@@ -51,6 +51,11 @@ const routes = [
     ]
   },
   {
+    path: '/ComponentMitt',
+    name: 'ComponentMitt',
+    component: () => import('@/pages/ComponentMitt/index.vue') // 兄弟组件传值
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import('@/pages/404/index.vue') // 404

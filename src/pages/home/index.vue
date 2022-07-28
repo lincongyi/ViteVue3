@@ -16,6 +16,9 @@ shallow.value = 100
 val.value = 200
 const pcolor = ref('#ff0')
 
+// const name = $ref('cy')
+// console.log(name)
+
 const router = useRouter()
 const toPage = (path) => {
   // const route = useRoute()
