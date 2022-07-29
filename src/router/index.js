@@ -56,6 +56,11 @@ const routes = [
     component: () => import('@/pages/ComponentMitt/index.vue') // 父子、兄弟组件传值
   },
   {
+    path: '/Mixin',
+    name: 'Mixin',
+    component: () => import('@/pages/Mixin/index.vue') // Mixin
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import('@/pages/404/index.vue') // 404

@@ -23,7 +23,7 @@
 // import A from './A/index.vue'
 // import B from './B/index.vue'
 
-const A = defineAsyncComponent(() => import('./A/index.vue'))
+const A = defineAsyncComponent(() => import('./A/index.vue')) // 常用于分包功能，没有懒加载
 const B = defineAsyncComponent(() => import('./B/index.vue'))
 
 const propsA = ref('A component is recieved data')
