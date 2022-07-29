@@ -53,7 +53,7 @@ const routes = [
   {
     path: '/ComponentMitt',
     name: 'ComponentMitt',
-    component: () => import('@/pages/ComponentMitt/index.vue') // 兄弟组件传值
+    component: () => import('@/pages/ComponentMitt/index.vue') // 父子、兄弟组件传值
   },
   {
     path: '/404',

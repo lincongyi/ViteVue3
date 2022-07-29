@@ -10,8 +10,12 @@
   <el-button type="danger">Danger</el-button>
   <el-button color="#626aef">Default</el-button>
 
-  <A></A>
-  <B></B>
+  <el-divider />
+
+  <el-input v-model="inputValue" disabled placeholder="Please input" />
+
+  <A :propsA="propsA"></A>
+  <B @clickEvent="getComponentData"></B>
 </div>
 
 </template>
@@ -21,6 +25,14 @@
 
 const A = defineAsyncComponent(() => import('./A/index.vue'))
 const B = defineAsyncComponent(() => import('./B/index.vue'))
+
+const propsA = ref('A component is recieved data')
+
+const inputValue = ref('')
+
+const getComponentData = (e) => {
+  inputValue.value = e
+}
 </script>
 <style lang="scss" scoped>
 
