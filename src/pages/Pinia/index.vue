@@ -1,37 +1,36 @@
 <template>
-<div class="container">
-  <h1>PINIA PAGE</h1>
-  <p>count:{{counter.count}}</p>
-  <el-button type="primary" @click="handleIncrement">increment</el-button>
-  <el-button type="success" @click="handleDecrement">decrement</el-button>
-  <el-button type="info" @click="handleReset">reset</el-button>
-  <el-divider />
+  <div class="container">
+    <h1>PINIA PAGE</h1>
+    <p>count:{{ counter.count }}</p>
+    <el-button type="primary" @click="handleIncrement">increment</el-button>
+    <el-button type="success" @click="handleDecrement">decrement</el-button>
+    <el-button type="info" @click="handleReset">reset</el-button>
+    <el-divider />
 
-  <el-button type="warning" @click="handlePatchEvent1">patchEvent1</el-button>
-  <el-button type="danger" @click="handlePatchEvent2">patchEvent2</el-button>
-  <el-button color="#626aef">Default</el-button>
-  <el-divider />
+    <el-button type="warning" @click="handlePatchEvent1">patchEvent1</el-button>
+    <el-button type="danger" @click="handlePatchEvent2">patchEvent2</el-button>
+    <el-button color="#626aef">Default</el-button>
+    <el-divider />
 
-  <el-card class="box-card">
-    <template #header>
-      <div>
-        <span>{{counter.cardName}}</span>
+    <el-card class="box-card">
+      <template #header>
+        <div>
+          <span>{{ counter.cardName }}</span>
+        </div>
+      </template>
+      <div v-for="(item, index) in counter.userList" :key="index">
+        name:{{ item.name }}<el-divider direction="vertical" /> age:{{ item.age }}
       </div>
-    </template>
-    <div v-for="(item,index) in counter.userList" :key="index">
-      name:{{item.name}}<el-divider direction="vertical" />
-      age:{{item.age}}
-    </div>
-  </el-card>
-  <el-divider />
+    </el-card>
+    <el-divider />
 
-  <p>doubleCount:{{counter.doubleCount}}</p>
-  <p>doubleCountPlusOne:{{counter.doubleCountPlusOne}}</p>
-  <el-button type="success" @click="handleBack">back</el-button>
-</div>
+    <p>doubleCount:{{ counter.doubleCount }}</p>
+    <p>doubleCountPlusOne:{{ counter.doublesCountPlusOne }}</p>
+    <el-button type="success" @click="handleBack">back</el-button>
+  </div>
 </template>
 <script setup>
-import {useCounterStore} from '@/stores/index'
+import { useCounterStore } from '@/stores/index'
 const counter = useCounterStore()
 
 const handleIncrement = () => {
@@ -51,8 +50,8 @@ const handlePatchEvent1 = () => {
   })
 }
 const handlePatchEvent2 = () => {
-  counter.$patch((state) => {
-    state.userList.push({name: 'lora', age: 21})
+  counter.$patch(state => {
+    state.userList.push({ name: 'lora', age: 21 })
   })
 }
 const router = useRouter()

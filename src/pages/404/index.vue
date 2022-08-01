@@ -1,18 +1,18 @@
 <template>
-<div class="container">
-  <img class="error-image" :src="getImageUrl('404','jpeg')" />
-</div>
+  <div class="container">
+    <img class="error-image" :src="getImageUrl('404', 'jpeg')" />
+  </div>
 </template>
 <script setup>
 import { getImageUrl } from '@/utils'
 </script>
 <style lang="scss" scoped>
-.container{
+.container {
   display: flex;
   justify-content: center;
 }
-.error-image{
+.error-image {
   width: 400px;
-  height: 300px
+  height: 300px;
 }
 </style>

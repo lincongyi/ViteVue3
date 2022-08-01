@@ -27,7 +27,7 @@
     <img :src="getImageUrl('unpluginAutoImport-02')" />
   </div>
   <h3>4. .gitignore文件忽略auto-import.d.ts文件，不然每次都会生成配置文件</h3>
-  <div>{{name}} {{phoneNumber}}</div>
+  <div>{{ name }} {{ phoneNumber }}</div>
 </template>
 <script setup>
 import { getImageUrl } from '@/utils'
@@ -35,9 +35,9 @@ const name = ref('cy')
 const phoneNumber = ref('15800033233')
 </script>
 <style lang="scss" scoped>
-.image-wrap{
+.image-wrap {
   height: 400px;
-  img{
+  img {
     object-fit: contain;
     height: 100%;
   }

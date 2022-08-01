@@ -11,7 +11,8 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:vue/vue3-essential',
-    './.eslintrc-auto-import.json'
+    '@vue/prettier',
+    './.eslintrc-auto-import.json',
   ],
   'parserOptions': {
     'ecmaVersion': 'latest',
@@ -34,5 +35,6 @@ module.exports = {
     'key-spacing': [2, { 'beforeColon': false }],
     'no-multiple-empty-lines': [2, {'max': 2}],
     'vue/multi-word-component-names': 0,
+    'prettier/prettier': 'off'
   }
 }

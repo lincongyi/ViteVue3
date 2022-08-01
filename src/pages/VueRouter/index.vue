@@ -9,13 +9,11 @@
 <script setup>
 const router = useRouter()
 const handleErrorRouter = () => {
-  router.push({path: '/Pinia111'})
+  router.push({ path: '/Pinia111' })
 }
-const toPage = (path) => {
+const toPage = path => {
   // const route = useRoute()
   router.push({ path })
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

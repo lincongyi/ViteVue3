@@ -21,6 +21,11 @@ const routes = [
     component: () => import('@/pages/Stylelint/index.vue') // 配置stylelint
   },
   {
+    path: '/Prettier',
+    name: 'Prettier',
+    component: () => import('@/pages/Prettier/index.vue') // 配置prettier
+  },
+  {
     path: '/GetImageUrl',
     name: 'GetImageUrl',
     component: () => import('@/pages/GetImageUrl/index.vue') // 获取静态图片地址
