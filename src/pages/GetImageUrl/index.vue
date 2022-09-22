@@ -20,15 +20,24 @@
   <p>Vite 不会转换这个</p>
   <p>const imgUrl = new URL(imagePath, import.meta.url).href</p>
 
+  <h3>方法3：直接把图片import进来</h3>
+  <p>import myImage from '@/assets/images/getImageUrl-02.png'</p>
+  <div class="image-wrap">
+    <img :src="myImage" />
+  </div>
+
   <h3>补充：背景图片引入（一定要使用相对路径）</h3>
   <div class="background-image"></div>
   <div class="image-wrap">
     <img :src="getImageUrl('getImageUrl-05')" />
   </div>
+  
   <p>使用绝对路径在开发环境能够正常显示，但将导致打包后的路径不正确</p>
 </template>
 <script setup>
 import { getImageUrl } from '@/utils'
+import myImage from '@/assets/images/getImageUrl-02.png'
+
 </script>
 <style lang="scss" scoped>
 .image-wrap {

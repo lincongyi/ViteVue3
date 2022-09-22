@@ -16,7 +16,7 @@ const props = defineProps({
 console.log(props.propsA) // 访问父组件传过来的data
 const handleClick = () => {
   emitter.emit(
-    'clickEvent',
+    'clickEventMitt',
     `这是A组件传递过去的数据：${(Math.random() * 100) >> 0}`
   )
 }

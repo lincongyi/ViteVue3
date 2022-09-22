@@ -16,7 +16,7 @@ const handleClick = () => {
 }
 
 onMounted(() => {
-  emitter.on('clickEvent', (e) => {
+  emitter.on('clickEventMitt', (e) => {
     str.value = e
   })
 })

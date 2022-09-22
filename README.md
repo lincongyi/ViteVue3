@@ -1,7 +1,19 @@
-# Vue 3 + Vite
+# Vue 3 + Vite 测试项目
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## GetImageUrl(常用的Vite引入图片3种方法)
 
-## Recommended IDE Setup
+### 1.图片在assets前面加上/src
+### 2.new URL()
+### 3.import
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## ElementPlusUI
+
+### 全局引入
+### 按需导入&自动导入(unplugin-auto-import)
+
+## ComponentMitt
+
+### 使用mitt库实现兄弟组件通信
+### A、B组件引入mitt库，
+### A组件派发事件emitter.emit(event,data)
+### B组件监听事件emitter.on(event,(data)=>{})
