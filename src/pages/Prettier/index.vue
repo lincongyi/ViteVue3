@@ -16,7 +16,7 @@
       }
     </code>
   </pre>
-  <h3>3..eslintrc.js增加针对prettier的配置：</h3>
+  <h3>3..eslintrc.js文件增加针对prettier的配置：</h3>
   <pre>
     <code>
       'extends': [

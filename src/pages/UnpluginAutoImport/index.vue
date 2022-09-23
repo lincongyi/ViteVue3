@@ -1,7 +1,7 @@
 <template>
   <h1>Unplugin Auto Import PAGE</h1>
   <h2>自动导入Vue Api</h2>
-  <h3>1.安装依赖</h3>
+  <h3>1.安装开发依赖</h3>
   <p>npm i unplugin-auto-import -D</p>
   <h3>2.配置vite.config.js</h3>
   <p>import AutoImport from 'unplugin-auto-import/vite'</p>
