@@ -8,6 +8,23 @@ export const useCounterStore = defineStore('counter', {
         {name: 'cora', age: 18},
         {name: 'candice', age: 19},
         {name: 'zoe', age: 20},
+      ],
+      books: [
+        {
+          type: 'novel',
+          name: '英雄志',
+          date: new Date(Date.now()).toLocaleString('zh-cn')
+        },
+        {
+          type: 'novel',
+          name: '昆仑',
+          date: new Date(Date.now()).toLocaleString('zh-cn',{dateStyle:'long'})
+        },
+        {
+          type: 'tool',
+          name:'vue设计与实现',
+          date: new Date(Date.now()).toLocaleString('zh-cn')
+        }
       ]
     }
   },
