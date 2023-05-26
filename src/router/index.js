@@ -1,6 +1,6 @@
 import {
   createRouter,
-  createWebHistory,
+  createWebHistory
   // createWebHashHistory,
 } from 'vue-router'
 
@@ -52,7 +52,7 @@ const routes = [
     component: () => import('@/pages/VueRouter/index.vue'), // VueRouter
     children: [
       // { path: '', redirect: 'GetImageUrl' }, // path值为空，会重定向到指定的页面地址，并忽略component的内容
-      { path: 'childPage', name: 'childPage', component: () => import('@/pages/Pinia/index.vue') },
+      { path: 'childPage', name: 'childPage', component: () => import('@/pages/Pinia/index.vue') }
     ]
   },
   {
@@ -66,6 +66,11 @@ const routes = [
     component: () => import('@/pages/Mixin/index.vue') // Mixin
   },
   {
+    path: '/JSX',
+    name: 'JSX',
+    component: () => import('@/pages/JSX/index.vue') // Mixin
+  },
+  {
     path: '/404',
     name: '404',
     component: () => import('@/pages/404/index.vue') // 404
@@ -73,8 +78,8 @@ const routes = [
   {
     path: '/:pathMatch(.*)',
     name: '404',
-    component: () => import('@/pages/404/index.vue'), // 404
-  },
+    component: () => import('@/pages/404/index.vue') // 404
+  }
 ]
 
 const router = createRouter({
