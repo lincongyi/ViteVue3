@@ -66,27 +66,50 @@ import { useCounterStore } from '@/stores/index'
 import { storeToRefs } from 'pinia'
 const counter = useCounterStore()
 
+/**
+ * 加1
+ */
 const handleIncrement = () => {
-  counter.increment(100)
+  console.log(JSON.stringify(counter.$state))
+  counter.increment()
 }
+
+/**
+ * 减n
+ */
 const handleDecrement = () => {
   counter.decrement(2)
 }
+
+/**
+ * 重置初始值
+ */
 const handleReset = () => {
   counter.$reset()
 }
 
+/**
+ * 修改state的方法（不推荐直接修改state）
+ */
+/**
+ * 传入targe对象进行修改
+ */
 const handlePatchEvent1 = () => {
   counter.$patch({
-    cardName: 'CY',
-    count: 100
+    cardName: `CY`,
+    count: (Math.random() * 100).toFixed(2)
   })
 }
+
+/**
+ * 回调函数进行修改
+ */
 const handlePatchEvent2 = () => {
   counter.$patch(state => {
     state.userList.push({ name: 'lora', age: 21 })
   })
 }
+
 const router = useRouter()
 const handleBack = () => {
   router.go(-1)
@@ -97,35 +120,30 @@ const Car = reactive({
   ferrari: ['california T', 'f430', '59xxe']
 })
 const handleAddType = () => {
+  if ('mclaren' in Car) return
   Car.mclaren = ['570s coupe', '720s', 'artura', '675lt']
 }
 const handleChangeType = () => {
   Car.ferrari = ['612', 'leferrari', 'F458']
 }
 
+// 使用storeToRefs可以保证解构出来的数据也是响应式的
 const { books } = storeToRefs(counter)
 const handleEvent1 = () => {
   console.log(books) // Ref<>
   books.value[1].name = books.value[1].name === '沧海' ? '昆仑' : '沧海'
 }
 
-// const { books } = counter
-// const handleEvent1 = () => {
-//   console.log(books) // Reactive<>
-//   books[1].name = books[1].name === '沧海' ? '昆仑' : '沧海'
-// }
-
 // 方法1：$patch，接收对象参数
 const handleEvent2 = () => {
   counter.$patch({
-    ...counter,
-    ...{ books: [{ type: 'tool', name: 'typescript' }] }
+    books: [{ type: 'tool', name: 'typescript' }]
   })
 }
 // 方法2：$patch，回调函数批量修改数据
 const handleEvent3 = () => {
   counter.$patch(item => {
-    console.log(item.books)
+    // 特别有效作用于针对性修改数组或对象某项
     item.books[1] = {
       type: 'tool',
       name: 'react',

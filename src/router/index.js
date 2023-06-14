@@ -68,7 +68,12 @@ const routes = [
   {
     path: '/JSX',
     name: 'JSX',
-    component: () => import('@/pages/JSX/index.vue') // Mixin
+    component: () => import('@/pages/JSX/index.vue') // JSX
+  },
+  {
+    path: '/Playground',
+    name: 'Playground',
+    component: () => import('@/pages/Playground/index.vue') // Playground
   },
   {
     path: '/404',

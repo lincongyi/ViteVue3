@@ -5,6 +5,7 @@
     <p>val:{{ val }}</p>
     <p class="test">aaaaaaa</p>
     <el-button type="success" @click="toPage('Pinia')">Success</el-button>
+    <el-button type="success" @click="toPage('Playground')">To Playground</el-button>
     <h3>
       观察 ref 的数据不直观，不方便<br />可以在控制台的设置面板中开启 「Enable custom
       formatters」选项。

@@ -5,9 +5,9 @@ export const useCounterStore = defineStore('counter', {
       count: 0,
       cardName: 'Card name',
       userList: [
-        {name: 'cora', age: 18},
-        {name: 'candice', age: 19},
-        {name: 'zoe', age: 20},
+        { name: 'cora', age: 18 },
+        { name: 'candice', age: 19 },
+        { name: 'zoe', age: 20 }
       ],
       books: [
         {
@@ -18,27 +18,27 @@ export const useCounterStore = defineStore('counter', {
         {
           type: 'novel',
           name: '昆仑',
-          date: new Date(Date.now()).toLocaleString('zh-cn',{dateStyle:'long'})
+          date: new Date(Date.now()).toLocaleString('zh-cn', { dateStyle: 'long' })
         },
         {
           type: 'tool',
-          name:'vue设计与实现',
+          name: 'vue设计与实现',
           date: new Date(Date.now()).toLocaleString('zh-cn')
         }
       ]
     }
   },
   getters: {
-    doubleCount: (state) => state.count*2,
-    doubleCountPlusOne(){
-      return this.doubleCount+1
+    doubleCount: state => state.count * 2,
+    doubleCountPlusOne() {
+      return this.doubleCount + 1
     }
   },
   actions: {
-    increment(){
+    increment() {
       this.count++
     },
-    decrement(number){
+    decrement(number = 1) {
       this.count -= number
     }
   }
